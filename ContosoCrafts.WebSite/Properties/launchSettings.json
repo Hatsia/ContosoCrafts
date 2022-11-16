@@ -1,10 +1,14 @@
-﻿{
+{
   "iisSettings": {
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
+    "iis": {
+      "applicationUrl": "http://localhost/ContosoCrafts.WebSite",
+      "sslPort": 0
+    },
     "iisExpress": {
-      "applicationUrl": "http://localhost:1526",
-      "sslPort": 44300
+      "applicationUrl": "http://localhost:5001",
+      "sslPort": 44391
     }
   },
   "profiles": {
@@ -16,12 +20,12 @@
       }
     },
     "ContosoCrafts.WebSite": {
-      "commandName": "Project",
+      "commandName": "IIS",
       "launchBrowser": true,
-      "applicationUrl": "https://localhost:5001;http://localhost:5000",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
-      }
+      },
+      "applicationUrl": "https://localhost:5001;http://localhost:5000"
     }
   }
 }
