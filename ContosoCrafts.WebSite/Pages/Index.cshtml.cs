@@ -19,6 +19,7 @@ namespace ContosoCrafts.WebSite.Pages
         public IndexModel(ILogger<IndexModel> logger, JsonFileProductService productService)
         {
             _logger = logger;
+            ProductService = productService;
         }
 
         public void OnGet()
