@@ -28,6 +28,7 @@ namespace ContosoCrafts.WebSite
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+            services.AddControllers();
             services.AddTransient<JsonFileProductService>();
         }
 
@@ -56,12 +57,13 @@ namespace ContosoCrafts.WebSite
             {
                 //Simple API. Returning JSON - JavaScript Object Notation for this mobile site(or Xamarin web app), if we are web services and someone could call us as a web service
                 endpoints.MapRazorPages();
-                endpoints.MapGet("/products", (context) =>
-                {
-                    var products = app.ApplicationServices.GetService<JsonFileProductService>().GetProducts();
-                    var json = JsonSerializer.Serialize<IEnumerable<Product>>(products);
-                    return context.Response.WriteAsync(json);
-                });
+                endpoints.MapControllers();
+                //endpoints.MapGet("/products", (context) =>
+                //{
+                //    var products = app.ApplicationServices.GetService<JsonFileProductService>().GetProducts();
+                //    var json = JsonSerializer.Serialize<IEnumerable<Product>>(products);
+                //    return context.Response.WriteAsync(json);
+                //});
             });
         }
     }
