@@ -9,15 +9,15 @@ using System.Threading.Tasks;
 
 namespace ContosoCrafts.WebSite.Controllers
 {
-    [Route("[controller]")]
+    [Route("[controller]")]    // Or use [Route("/Products")]
     [ApiController]
     public class ProductsController : ControllerBase
     {
+        public JsonFileProductService ProductService { get;  }
         public ProductsController(JsonFileProductService productService)
         {
             this.ProductService = productService;
         }
-        public JsonFileProductService ProductService { get;  }
         
         [HttpGet]
         public IEnumerable<Product> Get()

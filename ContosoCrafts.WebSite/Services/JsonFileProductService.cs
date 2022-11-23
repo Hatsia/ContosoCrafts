@@ -27,5 +27,34 @@ namespace ContosoCrafts.WebSite.Services
                     PropertyNameCaseInsensitive = true
                 });
         }
+
+        public void AddRating(string productID, int rating)
+        {
+            var products = GetProducts();
+            var query = products.First(x => x.Id == productID);
+            if (query.Ratings == null)
+            {
+                query.Ratings = new int[] { rating };
+            }
+            else
+            {
+                var ratings = query.Ratings.ToList();
+                ratings.Add(rating);
+                query.Ratings = ratings.ToArray();
+
+            }
+
+            //Write edited(addded rating) Product to json file.
+            using (var outputStream = File.OpenWrite(JsonFileName))
+            {
+                JsonSerializer.Serialize<IEnumerable<Product>>( //It's not a only one way to write some text. It's used to write if a user speaks not only English, maybe Chinese or Japanese.
+                    new Utf8JsonWriter(outputStream, new JsonWriterOptions {
+                        SkipValidation = true,
+                        Indented = false
+                    }),
+                    products
+                );
+            }
+        }
     }
 }
