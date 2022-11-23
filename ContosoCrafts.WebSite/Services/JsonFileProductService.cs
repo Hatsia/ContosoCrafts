@@ -45,7 +45,17 @@ namespace ContosoCrafts.WebSite.Services
             }
 
             //Write edited(addded rating) Product to json file.
-            using (var outputStream = File.OpenWrite(JsonFileName))
+            /* Mistake discription and it resolve:
+            FROM Marvel SE. Youtube comment.
+                For anyone who notices the error at 15:35:
+
+                1. Go to JsonFileProductService.cs
+                2. Go to the AddRating method
+                3. Change File.OpenWrite(JsonFileName) to File.Open(JsonFileName, FileMode.Truncate)
+
+                The reason this was causing an error is because the length of the string being written was different than what the product.json file had. If you read the microsoft docs, the remarks say a difference in length will cause a sort of 'mix' between the two. 
+            */
+            using (var outputStream = File.Open(JsonFileName, FileMode.Truncate)) //It was File.OpenWrite(JsonFileName) - and it caused a mistake in product.json, when the url was inputed in browser.
             {
                 JsonSerializer.Serialize<IEnumerable<Product>>( //It's not a only one way to write some text. It's used to write if a user speaks not only English, maybe Chinese or Japanese.
                     new Utf8JsonWriter(outputStream, new JsonWriterOptions {
@@ -56,5 +66,6 @@ namespace ContosoCrafts.WebSite.Services
                 );
             }
         }
+
     }
 }
