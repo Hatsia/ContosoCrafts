@@ -35,3 +35,8 @@ D:\Programs\Visual Studio\ASP.NET Core\ContosoCrafts\ContosoCrafts.WebSite\obj\D
 D:\Programs\Visual Studio\ASP.NET Core\ContosoCrafts\ContosoCrafts.WebSite\obj\Debug\netcoreapp3.1\ContosoCrafts.WebSite.pdb
 D:\Programs\Visual Studio\ASP.NET Core\ContosoCrafts\ContosoCrafts.WebSite\obj\Debug\netcoreapp3.1\ContosoCrafts.WebSite.genruntimeconfig.cache
 D:\Programs\Visual Studio\ASP.NET Core\ContosoCrafts\ContosoCrafts.WebSite\obj\Debug\netcoreapp3.1\ContosoCrafts.WebSite.csproj.CopyComplete
+D:\Programs\Visual Studio\ASP.NET Core\ContosoCrafts\ContosoCrafts.WebSite\obj\Debug\netcoreapp3.1\ContosoCrafts.WebSite.RazorComponent.input.cache
+D:\Programs\Visual Studio\ASP.NET Core\ContosoCrafts\ContosoCrafts.WebSite\obj\Debug\netcoreapp3.1\RazorDeclaration\Components\ProductList.razor.g.cs
+D:\Programs\Visual Studio\ASP.NET Core\ContosoCrafts\ContosoCrafts.WebSite\obj\Debug\netcoreapp3.1\ContosoCrafts.WebSite.RazorComponent.output.cache
+D:\Programs\Visual Studio\ASP.NET Core\ContosoCrafts\ContosoCrafts.WebSite\obj\Debug\netcoreapp3.1\RazorDeclaration\ContosoCrafts.WebSite.dll
+D:\Programs\Visual Studio\ASP.NET Core\ContosoCrafts\ContosoCrafts.WebSite\obj\Debug\netcoreapp3.1\Razor\Components\ProductList.razor.g.cs

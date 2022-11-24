@@ -28,6 +28,7 @@ namespace ContosoCrafts.WebSite
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+            services.AddServerSideBlazor();
             services.AddControllers(); //Used for using Controllers
             services.AddTransient<JsonFileProductService>();
         }
@@ -57,7 +58,7 @@ namespace ContosoCrafts.WebSite
             {
                 endpoints.MapRazorPages();
                 endpoints.MapControllers(); // <- It use as API for /Products
-
+                endpoints.MapBlazorHub();
                 //Simple API. Returning JSON - JavaScript Object Notation for this mobile site(or Xamarin web app), if we are web services and someone could call us as a web service
                 //endpoints.MapGet("/products", (context) =>
                 //{
