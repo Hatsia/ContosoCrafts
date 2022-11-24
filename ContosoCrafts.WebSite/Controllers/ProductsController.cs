@@ -29,6 +29,7 @@ namespace ContosoCrafts.WebSite.Controllers
         //  [HttpPost] - Make a new thing in a database
         //  [HttpPut] - Update a database
         //  [HttpPatch] - Changing a little. [HttpPatch] "[FromBody]" - of the patch
+        //  [HttpDelete] - For deleting
         [Route("Rate")] //The URL of this method would be Products/Rate
         [HttpGet] //Example of URL "localhost:5001/Products/Rate?ProductId=jenlooper-light&Rating=3"
         public ActionResult Get( // Name method is tested name. Better rename this method somehow.
